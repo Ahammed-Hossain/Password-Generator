@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Password Generator</h1>
 
+        <div class="inputbox">
+          <input
+            type="text"
+            id="Generate-box"
+            placeholder="Generated password"
+          />
+        </div>
+        <label>Length: <span class="lenght-value">12</span></label>
 
+        <input type="range" min="6" max="32" value="12" id="lengthSlider" />
 
+        <div class="checkBox-group">
+          <label>
+            <input class="checkbox" id="Uppercase" type="checkbox" />
+            Uppercase</label
+          >
+          <label>
+            <input class="checkbox" id="Lowercase" type="checkbox" />
+            Lowercase</label
+          >
+          <label>
+            <input class="checkbox" id="Symbol" type="checkbox" /> Symbol</label
+          >
+          <label>
+            <input class="checkbox" id="Number" type="checkbox" /> Number</label
+          >
+        </div>
 
+        <button class="generate">Generate</button>
+        <button class="copy">Copy</button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
