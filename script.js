@@ -4,36 +4,32 @@ let lengthSlider = document.getElementById("lengthSlider");
 
 lengthValue.innerText = lengthSlider.value;
 
-lengthSlider.addEventListener('input', (event) => {
-    lengthValue.innerHTML = event.target.value;
+lengthSlider.addEventListener('input', function () {
+    lengthValue.innerHTML = lengthSlider.value;
 });
-
-let letters = [
-    [A],
-    [B],
-    [C],
-    [D],
-    [a],
-    [b],
-    [c],
-    [d],
-    [1],
-    [2],
-    [3],
-    [4],
-    [5]
-];
 
 
 function generatePassword() {
+    let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+    let arr = letters.split("");
+    let passwordStr = "";
 
+    let length = 8;
+
+    for (let i = 0; i < length; i++) {
+        passwordStr += arr[Math.floor(Math.random() * arr.length)];
+        password.innerText = passwordStr;
+    }
 };
 
 let rando
 
-let Generate = document.querySelector('.generate');
+
 let Copy = document.querySelector('.copy');
 
+
+let Generate = document.querySelector('.generate');
 Generate.addEventListener('click', function () {
     generatePassword();
+
 });
