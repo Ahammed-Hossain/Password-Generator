@@ -14,7 +14,7 @@ function generatePassword() {
     let arr = letters.split("");
     let passwordStr = "";
 
-    let length = 8;
+    let length = 10;
 
     for (let i = 0; i < length; i++) {
         passwordStr += arr[Math.floor(Math.random() * arr.length)];
