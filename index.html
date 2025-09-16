@@ -16,12 +16,13 @@
             type="text"
             id="Generate-box"
             placeholder="Generated password"
-          readonly/>
+            readonly
+          />
         </div>
         <label for="lengthSlider"
           >Length: <span id="length-value">12</span></label
         >
-        <input type="range" id="lengthSlider" min="8" max="40" value="12" />
+        <input type="range" id="lengthSlider" min="8" max="32" value="12" />
 
         <div class="checkBox-group">
           <label>
@@ -39,9 +40,11 @@
             <input class="checkbox" id="Number" type="checkbox" /> Number</label
           >
         </div>
-
-        <button class="generate">Generate</button>
-        <button class="copy">Copy</button>
+        <div class="sec1">
+          <button class="generate">Generate</button>
+          <button class="copy">Copy</button>
+        </div>
+        <button class="clear">Clear</button>
       </div>
     </div>
 
